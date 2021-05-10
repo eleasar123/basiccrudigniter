@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New Item</h2>
+            <h2>Add New Task</h2>
         </div>
-        <div class="pull-right">
+        <div class="pull-right" style="margin-right:200px;margin-top:100px">
             <a class="btn btn-primary" href="<?php echo base_url('itemCRUD');?>"> Back</a>
         </div>
     </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Description:</strong>
+                <strong>Body:</strong>
                 <textarea name="description" class="form-control"></textarea>
             </div>
         </div>

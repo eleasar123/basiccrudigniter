@@ -33,9 +33,15 @@ class ItemCRUD extends CI_Controller {
    {
        $data['data'] = $this->itemCRUD->get_itemCRUD();
 
-
        $this->load->view('theme/header');       
        $this->load->view('itemCRUD/list',$data);
+       $this->load->view('theme/footer');
+   }
+   public function trash()
+   {
+       $data['data'] = $this->itemCRUD->get_itemCRUDTrash();
+       $this->load->view('theme/header');       
+       $this->load->view('itemCRUD/trash',$data);
        $this->load->view('theme/footer');
    }
 
@@ -115,6 +121,7 @@ class ItemCRUD extends CI_Controller {
    {
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('description', 'Description', 'required');
+        $this->form_validation->set_rules('status', 'Status', 'required');
 
 
         if ($this->form_validation->run() == FALSE){
